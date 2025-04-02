@@ -38,6 +38,22 @@
             margin: 5px;
             border-radius: 3px;
         }
+        .subscribe-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .subscribe-btn:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
@@ -47,7 +63,10 @@
         <h2>Обо мне</h2>
         <p>Я студент 6 семестра, изучающий программирование. В настоящее время осваиваю работу с системами контроля версий Git, а также совершенствую свои навыки в веб-разработке.</p>
         
-        <p>Мой интерес к программированию начался с курсов по основам Python, и с тех пор я расширил свои знания до веб-технологий, включая HTML, CSS и JavaScript.</p>
+        <p>Мой интерес к программированию начался с курсов по основам Python и C++, и с тех пор я расширил свои знания до веб-технологий, включая HTML, CSS.</p>
+        
+        <!-- Кнопка "Подписаться на новости" -->
+        <button class="subscribe-btn" onclick="subscribe()">Подписаться на новости</button>
     </div>
     
     <div class="skills">
@@ -55,10 +74,19 @@
         <ul>
             <li>HTML5</li>
             <li>CSS3</li>
-            <li>C++</li>
+            <li>C++ (базовый)</li>
             <li>Git</li>
             <li>Python</li>
         </ul>
     </div>
+
+    <script>
+        function subscribe() {
+            const email = prompt("Введите ваш email для подписки:");
+            if (email) {
+                alert(`Спасибо за подписку, ${email}! Мы будем держать вас в курсе.`);
+            }
+        }
+    </script>
 </body>
 </html>
